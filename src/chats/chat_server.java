@@ -101,6 +101,7 @@ public class chat_server extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -136,6 +137,7 @@ public class chat_server extends javax.swing.JFrame {
         });
         String msgin="";
         try{
+              
         
             ss=new ServerSocket(1000);
             s=ss.accept();
@@ -143,7 +145,9 @@ public class chat_server extends javax.swing.JFrame {
             dout=new DataOutputStream(s.getOutputStream());
             while(!msgin.equals("exit")){
              msgin=din.readUTF();
+             new LogsMaintain(msgin);
              jTextArea1.setText(jTextArea1.getText().trim()+"\n"+msgin);
+             
              
             }
         }

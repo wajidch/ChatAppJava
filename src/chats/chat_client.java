@@ -122,7 +122,7 @@ public class chat_client extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(chat_client.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+//jdbc:mysql://localhost:3306/users?zeroDateTimeBehavior=convertToNull
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -137,7 +137,7 @@ public class chat_client extends javax.swing.JFrame {
             String msgin="";
             while(!msgin.equals("exit")){
             msgin=din.readUTF();
-            jTextArea1.setText(jTextArea1.getText().trim()+"\n Server:\t"+msgin);
+            jTextArea1.setText(jTextArea1.getText().trim()+"\n Server:"+msgin);
             }
         }
         catch(Exception ex){
